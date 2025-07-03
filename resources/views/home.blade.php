@@ -4,25 +4,38 @@
 
 @section('content')
 
-    <!-- HERO Section -->
-    <section id="hero" class="relative min-h-screen bg-[#fdfafa] flex items-center justify-center overflow-hidden">
-        <img src="{{ asset('assets/images/satu-seduh.jpg') }}" alt="Logo Background"
-            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] max-w-[100%] opacity-100% z-0">
+    <section id="hero"
+        class="relative min-h-screen bg-[#fdfafa] flex items-center justify-center px-4 md:px-12 lg:px-20 overflow-hidden"
+        style="background-image: url('{{ asset('assets/images/satu-seduh.png') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
 
-        <div class="relative z-10 bg-white/55 rounded-xl p-8 shadow-md backdrop-blur-sm max-w-2xl text-center">
-            <img src="{{ asset('assets/images/logocoffee.png') }}" alt="Logo" class="mx-auto w-48 mb-6">
-            <div class="filosofi-text">
-                <h1 class="text-3xl font-playfair text-[#3c2f2f] mb-4">Filosofi Secangkir Kopi</h1>
-                <p class="text-[#3c2f2f]">Secangkir kopi memiliki rasa yang khas, seperti hidup yang memiliki cerita.
-                    Kami hadir untuk menyajikan lebih dari sekedar rasa, namun juga membawa makna.</p>
+        <!-- Wrapper Flex Horizontal -->
+        <div class="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-12 w-full max-w-6xl">
+
+            <!-- Logo Kopi -->
+            <div class="flex-shrink-0 mt-32 md:mt-44">
+                <img src="{{ asset('assets/images/logocoffee.png') }}" alt="Logo Kopi" class="w-72 md:w-92 lg:w-96">
+            </div>
+
+            <!-- Kotak Teks di Samping Logo -->
+            <div
+                class="bg-white/40 backdrop-blur-md rounded-xl px-6 py-5 shadow-md max-w-md md:max-w-lg w-full text-left md:ml-[-5rem] md:mt-68">
+                <h1 class="text-2xl md:text-3xl font-playfair text-[#3c2f2f] mb-3">Filosofi Satu Seduh</h1>
+                <p class="text-[#3c2f2f] text-sm md:text-base leading-relaxed">
+                    Satu Seduh bukan sekadar kedai kopi. Ia adalah ruang tenang di tengah hiruk-pikuk dunia. Tempat di mana
+                    setiap cangkir kopi diracik dengan ketulusan, tidak terburu-buru, dan sepenuh hati—karena kami percaya
+                    bahwa sebuah rasa yang dalam hanya bisa lahir dari proses yang penuh makna.
+                </p>
             </div>
         </div>
+        </div>
+
 
         <!-- Dekorasi Furniture -->
         <img src="{{ asset('assets/images/kursi.png') }}" alt="Dekor Kursi"
-            class="absolute bottom-0 right-[-15%] w-[600px] opacity-90 hidden md:block">
+            class="absolute bottom-0 right-[0] max-w-[450px] opacity-100 hidden md:block z-0">
         <img src="{{ asset('assets/images/mejacoffee.png') }}" alt="Dekor Meja"
-            class="absolute bottom-0 right-[5%] w-[400px] opacity-90 hidden md:block">
+            class="absolute bottom-0 right-[5vw] max-w-[350px] opacity-100 hidden md:block z-0">
+
     </section>
 
     <!-- PRODUK Section -->
